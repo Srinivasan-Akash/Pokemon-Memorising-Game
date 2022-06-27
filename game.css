@@ -1,0 +1,56 @@
+body{
+    background-color: black;
+    margin:0;
+    padding: 0;
+    
+}
+
+h1{
+    color:aliceblue;
+    text-align: center;
+    font-family: Comic Sans MS;
+    margin-left: 5%;
+}
+
+.container{
+    display: grid;
+    width: 400px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    margin-top: 2%;
+    perspective: 800px;
+}
+
+
+
+.card .front{
+    display: none;
+}
+
+.card, .card-flip{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid gray;
+    border-radius: 15px;
+     
+}
+
+
+
+.card-flip{ 
+    transform: rotateY(180deg);
+    transition: transform 1s ease;
+}
+
+.card-flip .back{
+    display: none;
+    backface-visibility: hidden;
+}
